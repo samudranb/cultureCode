@@ -5,9 +5,18 @@ This is a shorthand articulation of the ideal company culture that I'd like to b
 ## What the processes should look like
 
 ```
-function move(fast=true){
+function move(fast=true, assumptions, priorData){
+  if (fast==false) {
+    smallerProblems = [];
+    smallerProblems = breakdownIntoSmallerProblems(this);
 
-  experimentResults = articulateHypothesis().getData();
+    for problem in smallerProblems:
+      problem.move(true, assumptions, priorData)
+      return
+    // see doICareAbout.codingLanguage  
+  }
+
+  experimentResults = articulateHypothesis(assumptions, priorData).getData();
 
   if(youBrokeSomething == true){
     fix(fast);
@@ -17,22 +26,32 @@ function move(fast=true){
 
     lessons = synthesize(experimentResults);
 
-    scaleUp();
+    scaleUp(lessons);
 
     teachOthers(lessons);
   }
 }
 ```
 
-## What I care about
+## Do I care about...
 
 ```
-topicsWeCareAbout = [
-  "impact", "making a dent in the universe",
-  "design",
-  "sociology",
-  "user experience",
-  "psychology",
-  "lean"
-]
+doICareAbout = {
+  "impacting mankind's trajectory": true,
+  "solving the right problem": true,
+  "solving the problem the right way": true,
+  "design": true,
+  "sociology": true,
+  "user experience": true,
+  "psychology": true,
+  "lean": true,
+  "peopleIWorkWith": true,
+  "continuousLearning": true,
+  "knowledge management": true,
+  "online communities": true,
+
+  "codingLanguage": false,
+  "freeLunches": false,
+  "theNextUberForDogWalkers": false
+}
 ```
