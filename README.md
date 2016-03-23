@@ -21,7 +21,8 @@ function move(fast=true){
 
     teachOthers(lessons);
   }
-} ```
+}
+```
 
 ## What I care about
 
