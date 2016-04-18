@@ -15,11 +15,14 @@ function move(fast=true, assumptions, priorData){
       return
     // see doICareAbout.codingLanguage  
   }
+  
+  assumptions.append(getExpertInsights(this.parent))
+  priorData.append(getPriorExperimentData(this.parent))
 
   experimentResults = articulateHypothesis(assumptions, priorData).getData();
 
-  if(youBrokeSomething == true){
-    fix(fast);
+  if(iBrokeSomething == true){
+    fixFast();
     askForForgiveness();
   }
   else {
