@@ -12,7 +12,8 @@ function move(fast=true, assumptions, priorData){
 
     for problem in smallerProblems:
       problem.move(true, assumptions, priorData)
-      return
+    
+    return
     // see doICareAbout.codingLanguage  
   }
   
